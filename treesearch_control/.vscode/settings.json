@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "bmp.h": "c",
+        "image_server.h": "c",
+        "float.h": "c"
+    }
+}
