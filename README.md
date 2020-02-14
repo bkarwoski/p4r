@@ -26,9 +26,10 @@ The collision detection checks whether any of the edges of two given polygons in
         return intersected;
     }
 
+When a collision between one of the actors (robots) and a wall is detected, the robot is "pushed back" along the line connecting the wall and robot center until the collision is resolved.
 
 ## Graphics
-To visualize the simulation, I wrote 'graphics.c', which takes the floating point coordinates of each polygon and generates a rasterized .bmp image of the simulation, like the one below.
+To visualize the simulation, I wrote `graphics.c`and `bmp.c`, which take the floating point coordinates of each polygon and generate a rasterized .bmp image of the simulation, like the one below.
 
 ![Animation Example](chase_20_0_20.bmp)
 
