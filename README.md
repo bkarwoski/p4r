@@ -6,7 +6,6 @@ The world in this simulation consists of a 2D map with walls and obstacles. Ther
 
 The collision detection used cross products of vectors connecting points.
 
-'''c
 
     double vec1[2] = {x2 - x1, y2 - y1};
     double t11[2] = {x3 - x1, y3 - y1};
@@ -25,7 +24,6 @@ The collision detection used cross products of vectors connecting points.
     bool intersected = (neg1 && neg2) && !((cv1t11 * cv1t12 == 0) && (cv2t21 * cv2t22 == 0));
     return intersected;
 
-'''
 
 ## Graphics
 To visualize the simulation, I wrote 'graphics.c', which takes the floating point coordinates of each polygon and generates a rasterized .bmp image of the simulation, like the one below.
