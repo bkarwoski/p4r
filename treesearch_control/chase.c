@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
 #include <float.h>
 #include "bmp.h"
 #include "graphics.h"
@@ -247,6 +248,11 @@ int main(int argc, char *argv[]) {
             bmp_serialize(&state.bmp, state.image_data);
             image_server_set_data(state.image_size, state.image_data);
             nanosleep(&interval, NULL);
+            char filename[20] = "frame_";
+            sprintf(filename, "%s%d%s", "frame_", i, ".bmp");
+            FILE *f = fopen(filename, "wb");
+            fwrite(state.image_data, state.image_size, 1, f);
+            fclose(f);
         }
         search_node_t search_node = {0};
         search_node.chaser = state.chaser;

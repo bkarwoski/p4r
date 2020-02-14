@@ -36,7 +36,11 @@ To visualize the simulation, I wrote [graphics.c](treesearch_control/graphics.c)
 
 ## Tree Search
 The goal of the 'chaser' robot (shown in red above) is to catch the 'runner' robot (in green). The runner moves randomly with each timestep. The chaser can either turn left, turn right, or move forward each timestep. To choose an action for the chaser, a recursive tree search is performed at each timestep. Each possible action is chosen at each node in the tree, up to a `MAX_DEPTH` of four iterations, and the action with the highest score is chosen. The score is calculated as the inverse of the distance between the robots, plus the chaser's velocity, to penalize getting stuck in walls and corners with zero velocity.
-This logic is implemented in the `search_actions` function in [chase.c](treesearch_control/chase.c)
+This logic is implemented in the `search_actions` function in [chase.c](treesearch_control/chase.c).
+
+## Results
+![Animated Result](treesearch_control/chase_40_0_20.gif)
+
 
 ### Attributions
 Starter code and the animation html / js files were provided through the University of Michigan's new [Programming for Robotics](https://robotics.umich.edu/academic-program/courses/rob599-f19/) course. 
