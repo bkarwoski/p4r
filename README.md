@@ -4,7 +4,7 @@ This project consists of three main sections, all written from scratch: A basic 
 ## Physics
 The world in this simulation consists of a 2D map with walls and obstacles. There are two triangular robot actors, with the ability to turn and move forward.
 
-The collision detection used cross products of vectors connecting points.
+The collision detection checks whether any of the edges of two given polygons intersect. This is accomplished by comparing each pair of lines, one at a time, using this 'intersects' function:
 
     bool intersects(double x1, double y1, double x2, double y2,
                     double x3, double y3, double x4, double y4) {
