@@ -39,6 +39,7 @@ The goal of the 'chaser' robot (shown in red above) is to catch the 'runner' rob
 This logic is implemented in the `search_actions` function in [chase.c](treesearch_control/chase.c).
 
 ## Results
+For almost every starting position of the runner robot, the chaser is able to catch it!
 ![Animated Result](treesearch_control/chase_40_0_20.gif)
 
 
