@@ -140,19 +140,12 @@ bool resolveWallCollisions(agent_t *bot) {
                         bool isCollided = collision(&nextBlock, &rob);
                         if (isCollided) {
                             any_collision = true;
-                            //printf("Collision w/ tile %d, %d, ", x, y);
                             double dx = bot->x - xPos;
                             double dy = bot->y - yPos;
                             double dist = sqrt(dx * dx + dy * dy);
-                            //printf("movement from %.2f, %.2f ", bot->x, bot->y);
                             bot->x += dx / dist * 0.5;
                             bot->y += dy / dist * 0.5;
                             collided = true;
-                            //printf("to %.2f, %.2f ", bot->x, bot->y);
-                            //printf("with robot xs: %.2f, %.2f, %.2f ",
-                            //    rob.xData[0], rob.xData[1], rob.xData[2]);
-                            //printf("ys: %.2f, %.2f, %.2f\n",
-                            //    rob.yData[0], rob.yData[1], rob.yData[2]);
                             isCollided = collision(&nextBlock, &rob);
                         }
                         vector_delete(&nextBlock);
@@ -255,7 +248,6 @@ int main(int argc, char *argv[]) {
             image_server_set_data(state.image_size, state.image_data);
             nanosleep(&interval, NULL);
         }
-
         search_node_t search_node = {0};
         search_node.chaser = state.chaser;
         search_node.runner = state.runner;

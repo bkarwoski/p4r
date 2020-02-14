@@ -1,5 +1,12 @@
 #include "collision.h"
 #include <stdio.h>
+
+/*
+Given two vectors of x,y points each defining a polygon, this code
+determines whether those polygons collide, which is defined as 
+one polygon containing the other (contains()), or the polygon's
+edges intersecting (intersects())
+*/
 bool intersects(double x1, double y1, double x2, double y2,
                 double x3, double y3, double x4, double y4) {
     double vec1[2] = {x2 - x1, y2 - y1};
@@ -17,9 +24,6 @@ bool intersects(double x1, double y1, double x2, double y2,
     bool neg2 = (cv2t21 * cv2t22 <= 0);
 
     bool intersected = (neg1 && neg2) && !((cv1t11 * cv1t12 == 0) && (cv2t21 * cv2t22 == 0));
-    // if (intersected) {
-    //     printf("intersected\n");
-    // }
     return intersected;
 }
 
@@ -34,7 +38,6 @@ bool contains(double x, double y, vector_xy_t *polyX) {
         double vec1[2] = {x2 - x1, y2 - y1};
         double t1[2] = {x - x1, y - y1};
         double cross = vec1[0] * t1[1] - vec1[1] * t1[0];
-        //printf("cross: %f x1: %f y1: %f x2: %f y2: %f\n", cross, x1, y1, x2, y2);
         if (cross < 0) {
             negCount++;
         } else if (cross > 0) {

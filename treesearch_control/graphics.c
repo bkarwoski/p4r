@@ -60,6 +60,7 @@ void gx_draw_poly(bitmap_t *bmp, color_bgr_t color, vector_xy_t *shape) {
 }
 
 void roundC(vector_xy_t *doubles) {
+    //finds nearest integer coordinates, used for plotting polygon edges
     double xMin = doubles->xData[0];
     double yMin = doubles->yData[0];
     double epsilon = 1e-6;
