@@ -8,8 +8,6 @@ The collision detection used cross products of vectors connecting points.
 
 '''c
 
-bool intersects(double x1, double y1, double x2, double y2,
-                double x3, double y3, double x4, double y4) {
     double vec1[2] = {x2 - x1, y2 - y1};
     double t11[2] = {x3 - x1, y3 - y1};
     double t12[2] = {x4 - x1, y4 - y1};
@@ -26,7 +24,6 @@ bool intersects(double x1, double y1, double x2, double y2,
 
     bool intersected = (neg1 && neg2) && !((cv1t11 * cv1t12 == 0) && (cv2t21 * cv2t22 == 0));
     return intersected;
-}
 
 '''
 
