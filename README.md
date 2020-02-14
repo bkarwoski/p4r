@@ -4,6 +4,7 @@ This project consists of three main sections, all written from scratch: A basic 
 ## Physics
 The world in this simulation consists of a 2D map with walls and obstacles. There are two triangular robot actors, with the ability to turn and move forward.
 
-Programming for Robotics- University of Michigan, Fall 2019
-
 ![Animation Example](chase_20_0_20.bmp)
+
+## Attributions
+Starter code and the animation html / js files were provided through the University of Michigan's new [Programming for Robotics](https://robotics.umich.edu/academic-program/courses/rob599-f19/) course. 
