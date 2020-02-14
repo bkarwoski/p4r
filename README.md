@@ -7,6 +7,7 @@ The world in this simulation consists of a 2D map with walls and obstacles. Ther
 The collision detection used cross products of vectors connecting points.
 
 '''
+
 bool intersects(double x1, double y1, double x2, double y2,
                 double x3, double y3, double x4, double y4) {
     double vec1[2] = {x2 - x1, y2 - y1};
@@ -26,6 +27,7 @@ bool intersects(double x1, double y1, double x2, double y2,
     bool intersected = (neg1 && neg2) && !((cv1t11 * cv1t12 == 0) && (cv2t21 * cv2t22 == 0));
     return intersected;
 }
+
 '''
 
 ## Graphics
