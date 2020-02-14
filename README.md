@@ -4,7 +4,7 @@ This project consists of three main sections, all written from scratch: A basic 
 ## Physics
 The world in this simulation consists of a 2D map with walls and obstacles. There are two triangular robot actors, with the ability to turn and move forward.
 
-The collision detection checks whether any of the edges of two given polygons intersect. This is accomplished by comparing each pair of lines, one at a time, using this 'intersects' function:
+The collision detection checks whether any of the edges of two given polygons intersect. This is accomplished by comparing each pair of lines, one at a time, using this `intersects` function:
 ```c
     bool intersects(double x1, double y1, double x2, double y2,
                     double x3, double y3, double x4, double y4) {
@@ -37,5 +37,5 @@ To visualize the simulation, I wrote [graphics.c](treesearch_control/graphics.c)
 ## Tree Search
 The goal of the 'chaser' robot (shown in red above) is to catch the 'runner' roboti (in green). The runner moves randomly with each timestep. The chaser can either turn left, turn right, or move forward each timestep. 
 
-## Attributions
+### Attributions
 Starter code and the animation html / js files were provided through the University of Michigan's new [Programming for Robotics](https://robotics.umich.edu/academic-program/courses/rob599-f19/) course. 
